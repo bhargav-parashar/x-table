@@ -18,7 +18,7 @@ function App() {
 
   
   const sortByDate = () => {
-    const sortedArr = tableData.sort((a, b) => {
+    const sortedArr = [...tableData].sort((a, b) => {
       const dateA = new Date(a.date);
       const dateB = new Date(b.date);
       if (dateA > dateB) {
@@ -40,7 +40,7 @@ function App() {
   };
 
   const sortByViews = () => {
-    const sortedArr = tableData.sort((a, b) => {
+    const sortedArr = [...tableData].sort((a, b) => {
       const dateA = new Date(a.date);
       const dateB = new Date(b.date);
       if (a.views > b.views) {
